@@ -31,7 +31,7 @@
 ### 결과 요약
 - 모델링 실패: 책표지로 특정할 수 있는 이미지를 생성할 수 없었음
 
-- ![image](https://user-images.githubusercontent.com/90163856/185928020-de71dce4-6913-466d-bbe8-0204350bb0d9.png)<br>
+![image](https://user-images.githubusercontent.com/90163856/185928020-de71dce4-6913-466d-bbe8-0204350bb0d9.png)<br>
 ↑ generator 생성 이미지 
 
 ---
