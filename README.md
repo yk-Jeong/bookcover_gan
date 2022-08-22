@@ -25,23 +25,33 @@
 <br>
 
 ### 결과 요약
-- 
--  
-- 
+- 모델링 실패: 책표지로 특정할 수 있는 이미지를 생성할 수 없었음
+
+- ![image](https://user-images.githubusercontent.com/90163856/185928020-de71dce4-6913-466d-bbe8-0204350bb0d9.png)
+↑ generator 생성 이미지 
 
 ---
 
 
 ### 데이터 세트의 특징
-
 - 출처: 인터넷 서점 예스24(yes24.com)에서 국내 문학부문 최신간 표지 1천여건을 직접 크롤링하여 수집(selenium 활용)
     ※데이터 세트 전처리 과정: (400, 280)px로 이미지 크기 축소 통일<br>
+
+![image](https://user-images.githubusercontent.com/90163856/185926415-f61da4ee-1b99-46af-913f-c405297f6986.png)
+
 
 <br>
 
 ### 문제해결 과정
-데이터 수집 및 정제 → 모델 구축
-- 사용 모델: DCGAN<br>
+- 주 사용 라이브러리: tensorflow, numpy
+- 사용 모델: DCGAN
+
+1) 수집한 이미지를 numpy array로 변환 
+
+2) image normalization 
+
+3) generator / discriminator 구축
+
 
 
 ### 한계점과 보완 방안
@@ -51,9 +61,8 @@
 (batch 32, buffer size 1000, epoch 10)
 
 #### 보완방안
-- 데이터 측면: 
-- 모델 측면: 
-
+- 데이터 측면: 일러스트/디자인 표지 분리, 데이터 추가 수집 
+- 모델 측면: Google colab 이상의 고성능 컴퓨팅 자원을 활용하여 dense layer 추가, hyperparameter와 epoch 재설정 
 
 
 ### Update
